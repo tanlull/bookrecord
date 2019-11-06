@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>My Home Page</h1>
+    <h1>My Book</h1>
     <div class="container">
-      <div class="card-columns">
+      <div class="card-deck">
         <my-card 
           v-for="(book,index) in $store.state.books"
           :bookDetail="book"
