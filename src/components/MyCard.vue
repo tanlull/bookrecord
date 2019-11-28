@@ -13,11 +13,14 @@
           </p>
           <div class="small-box">
             <small class="text-small">DATE: {{bookDetail.date}}</small>
-            <small class="text-small rating"> RATING: <b>{{bookDetail.rating}}</b></small>
+            <small class="text-small rating">
+              RATING:
+              <b>{{bookDetail.rating}}</b>
+            </small>
           </div>
           <div class="small-box">
             <router-link :to="'/edit-book/'+index" class="btn btn-primary">EDIT</router-link>
-            <a href="#" @click="deleteBook(index)" class="btn btn-danger">DELETE</a>
+            <a href="#" @click.prevent="comfirmDelete(index)" class="btn btn-danger">DELETE</a>
           </div>
         </div>
       </div>
@@ -30,8 +33,15 @@ import { mapActions } from "vuex";
 export default {
   name: "MyCard",
   props: ["bookDetail", "index"],
-  methods: {
-    ...mapActions(["deleteBook"])
+  methods:{
+    ...mapActions([
+      "deleteBook"
+    ]),
+    comfirmDelete(index){
+      var confirm =  window.confirm("Are You sure to delete this book");
+      if(confirm) this.deleteBook(index)
+      else return
+    }
   }
 };
 </script>

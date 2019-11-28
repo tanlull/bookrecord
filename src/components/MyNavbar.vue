@@ -18,6 +18,9 @@
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
+            <router-link class="nav-link" to="/about">About</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link" to="/add-book">Add Book</router-link>
           </li>
         </ul>
@@ -34,7 +37,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .container{
-        margin-top: 0;
-    }
+.container {
+  margin-top: 0;
+}
 </style>
