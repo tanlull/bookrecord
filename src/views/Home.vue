@@ -1,8 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <h1>MY HOME PAGE</h1>
-=======
     <h1>My Home Page</h1>
     <div class="container">
       <div class="card-columns">
@@ -13,7 +10,6 @@
         />
       </div>
     </div>
->>>>>>> parent of fb34a74... done
   </div>
 </template>
 
