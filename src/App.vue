@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <my-navbar/>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MyNavbar from './components/MyNavbar.vue'
+import MyNavbar from "./components/MyNavbar"
 export default {
   name: 'App',
-  components: {
+  components:{
     MyNavbar
   }
 }

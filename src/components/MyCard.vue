@@ -16,8 +16,8 @@
             <small class="text-small rating"> RATING: <b>{{bookDetail.rating}}</b></small>
           </div>
           <div class="small-box">
-            <router-link :to="'/edit-book/'+index" class="btn btn-primary">EDIT</router-link>
-            <a href="#" @click="deleteBook(index)" class="btn btn-danger">DELETE</a>
+            <router-link class="btn btn-primary">EDIT</router-link>
+            <a href="#" class="btn btn-danger">DELETE</a>
           </div>
         </div>
       </div>
@@ -26,12 +26,11 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
 export default {
   name: "MyCard",
   props: ["bookDetail", "index"],
   methods: {
-    ...mapActions(["deleteBook"])
+
   }
 };
 </script>
